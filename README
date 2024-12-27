@@ -44,6 +44,8 @@ This document outlines a curated stack for a modern data engineering workflow. T
   - [Databricks](https://www.databricks.com/)  
   - [Apache Hudi](https://hudi.apache.org/)  
   - [Delta Lake](https://delta.io/)  
+- Object Storage:
+  - [MinIO](https://min.io/) – An open-source, high-performance distributed object storage that is compatible with Amazon S3 APIs, often used for storing unstructured data.
 - **Query Engines**:
   - [Trino](https://trino.io/) (formerly Presto) – A fast and scalable distributed SQL query engine for analytics, perfect for querying large datasets across multiple sources with high performance.
 
@@ -105,8 +107,10 @@ This document outlines a curated stack for a modern data engineering workflow. T
 ---
 
 ## **Special mentions**  
-- [ByteBase](https://www.bytebase.com/docs/introduction/what-is-bytebase/)  
+- [ByteBase](https://www.bytebase.com/docs/introduction/what-is-bytebase/) – A database schema change and version control tool for DevOps teams.
+- [LakeFS](https://lakefs.io/) – A data version control platform for managing data lakes with Git-like semantics for your data.
 
+---
 
 ## **Good Combos**  
 Here are some "good combos" of tools to consider when starting a new project:
