@@ -1,0 +1,133 @@
+# Dream Stack for Data Engineering
+
+This document outlines a curated stack for a modern data engineering workflow. The tools are categorized by their functionality, focusing on popular and powerful options for each part of the data lifecycle.
+
+---
+
+## **ORCHESTRATION**  
+- [Apache Airflow](https://airflow.apache.org/)  
+- [Dagster](https://dagster.io/)  
+- [Prefect](https://prefect.io/)  
+
+---
+
+## **METADATA MANAGEMENT**  
+- [OpenMetadata](https://open-metadata.org/)  
+- [Amundsen](https://www.amundsen.io/)  
+- [DataHub](https://datahubproject.io/)  
+
+---
+
+## **TRANSFORMATION**  
+- [dbt (Data Build Tool)](https://www.getdbt.com/)  
+- [SQLMesh](https://sqlmesh.com/)  
+- [Apache Spark](https://spark.apache.org/)  
+
+---
+
+## **DATA INTEGRATION**  
+- [SLING](https://github.com/apache/incubator-sling)  
+- [Airbyte](https://airbyte.io/)  
+- [Fivetran](https://fivetran.com/)  
+- [Meltano](https://meltano.com/)  
+
+---
+
+## **DATA STORAGE**  
+- Relational Databases:
+  - [PostgreSQL](https://www.postgresql.org/)  
+  - [MySQL](https://www.mysql.com/)  
+- Data Warehouses:
+  - [Snowflake](https://www.snowflake.com/)  
+  - [Google BigQuery](https://cloud.google.com/bigquery)  
+- Lakehouse Storage:
+  - [Databricks](https://www.databricks.com/)  
+  - [Apache Hudi](https://hudi.apache.org/)  
+  - [Delta Lake](https://delta.io/)  
+- **Query Engines**:
+  - [Trino](https://trino.io/) (formerly Presto) – A fast and scalable distributed SQL query engine for analytics, perfect for querying large datasets across multiple sources with high performance.
+
+---
+
+## **STREAMING & REAL-TIME PROCESSING**  
+- [Apache Kafka](https://kafka.apache.org/)  
+- [Apache Flink](https://flink.apache.org/)  
+- [Redpanda](https://redpanda.com/)  
+
+---
+
+## **DATA CATALOG & DISCOVERY**  
+- [Alation](https://www.alation.com/)  
+- [Collibra](https://www.collibra.com/)  
+- [Monte Carlo](https://www.montecarlodata.com/)  
+
+---
+
+## **WORKFLOW AUTOMATION**  
+- [Apache NiFi](https://nifi.apache.org/)  
+- [Luigi](https://github.com/spotify/luigi)  
+- [Argo Workflows](https://argoproj.github.io/)  
+
+---
+
+## **MONITORING & OBSERVABILITY**  
+- [Great Expectations](https://greatexpectations.io/) (Data Quality)  
+- [WhyLabs](https://whylabs.ai/) (ML/AI Monitoring)  
+- [Prometheus + Grafana](https://prometheus.io/)  
+
+---
+
+## **DATA VISUALIZATION**  
+- [Tableau](https://www.tableau.com/)  
+- [Power BI](https://powerbi.microsoft.com/)  
+- [Metabase](https://www.metabase.com/)  
+
+---
+
+## **MACHINE LEARNING**  
+- **Frameworks**:
+  - [TensorFlow](https://www.tensorflow.org/)  
+  - [PyTorch](https://pytorch.org/)  
+  - [Scikit-learn](https://scikit-learn.org/stable/)  
+  - [XGBoost](https://xgboost.readthedocs.io/en/stable/)  
+  - [LightGBM](https://lightgbm.readthedocs.io/en/latest/)  
+
+- **ML Operations & Experiment Tracking**:
+  - [MLflow](https://mlflow.org/)  
+  - [Kubeflow](https://www.kubeflow.org/)  
+  - [Weights & Biases](https://www.wandb.com/)  
+
+- **AutoML**:
+  - [H2O.ai](https://www.h2o.ai/)  
+  - [Google AutoML](https://cloud.google.com/automl)  
+  - [Auto-sklearn](https://automl.github.io/auto-sklearn/)  
+
+---
+
+## **Good Combos**  
+Here are some "good combos" of tools to consider when starting a new project:
+
+- **Airflow + dbt + PostgreSQL**  
+  Ideal for traditional ETL workflows. Airflow handles orchestration, dbt manages data transformations, and PostgreSQL stores transactional data.
+
+- **Prefect + SQLMesh + Snowflake**  
+  Great for modern data pipelines with a focus on orchestration (Prefect), transformation (SQLMesh), and scalable analytics (Snowflake).
+
+- **Apache Kafka + Spark + Databricks**  
+  Perfect for real-time streaming data and large-scale data processing. Kafka is used for real-time messaging, Spark for distributed processing, and Databricks for managing the entire pipeline.
+
+- **Airbyte + Snowflake + Tableau**  
+  A solid choice for integrating data from various sources with Airbyte, storing it in Snowflake, and visualizing it using Tableau.
+
+- **MLflow + PyTorch + PostgreSQL**  
+  A combination focused on machine learning workflows. MLflow helps with experiment tracking and model management, PyTorch for deep learning, and PostgreSQL for storing metadata and results.
+
+- **Fivetran + BigQuery + Looker**  
+  A strong choice for businesses looking for a fully managed pipeline. Fivetran handles integrations, BigQuery stores your data in the cloud, and Looker provides analytics and reporting.
+
+- **Trino + Snowflake + Tableau**  
+  A great combo for querying and analyzing large datasets across multiple data sources. Trino allows fast SQL querying on various data storage systems, Snowflake acts as a scalable data warehouse, and Tableau provides insightful visualizations.
+
+---
+
+This stack is modular and can be customized based on specific use cases and organizational needs. Explore and adapt these tools to create a streamlined, efficient data engineering pipeline!
