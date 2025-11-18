@@ -30,6 +30,7 @@ This document outlines a curated stack for a modern data engineering workflow. T
 - [Airbyte](https://airbyte.io/)  
 - [Fivetran](https://fivetran.com/)  
 - [Meltano](https://meltano.com/)  
+- [DLTHub](https://dlthub.com) -- Personal favorite
 
 ---
 
