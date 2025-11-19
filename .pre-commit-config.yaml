@@ -1,0 +1,33 @@
+# This is the preferred pre-commit for my dbt projects, includes a python black formatter if theres python code in a src/** folder
+# Sets up some dbt rules for parsing, has descriptions, tables use ref or source.
+
+repos:
+- repo: https://github.com/tconbeer/sqlfmt
+  rev: v0.18.0
+  hooks:
+    - id: sqlfmt
+      language_version: python
+      additional_dependencies: ['.[jinjafmt]']
+
+- repo: https://github.com/dbt-checkpoint/dbt-checkpoint
+  rev: v2.0.7
+  hooks:
+    - id: dbt-parse
+      files: ^my_dbt_project/ 
+    - id: dbt-docs-generate
+      args: ["--cmd-flags", "++no-compile"]
+      files: ^my_dbt_project/ 
+    - id: check-script-semicolon
+      files: ^my_dbt_project/
+    - id: check-script-has-no-table-name
+      files: ^my_dbt_project/
+      files: ^my_dbt_project/models/**
+    - id: check-model-has-description
+      files: ^my_dbt_project/models/**
+
+- repo: https://github.com/psf/black
+  rev: 23.9.1
+  hooks:
+    - id: black
+      language_version: python3
+      files: ^src/.*\.py$
