@@ -47,6 +47,7 @@ This document outlines a curated stack for a modern data engineering workflow. T
   - [Delta Lake](https://delta.io/)  
 - Object Storage:
   - [MinIO](https://min.io/) – An open-source, high-performance distributed object storage that is compatible with Amazon S3 APIs, often used for storing unstructured data.
+  - Edit, Minio stopped being maintainced https://github.com/minio/minio/commit/27742d469462e1561c776f88ca7a1f26816d69e2
 - **Query Engines**:
   - [Trino](https://trino.io/) (formerly Presto) – A fast and scalable distributed SQL query engine for analytics, perfect for querying large datasets across multiple sources with high performance.
 
